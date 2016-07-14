@@ -11,7 +11,7 @@ class Api::PicsController < ApplicationController
     # file_url = open(params[:file_url], :allow_redirections => :safe)
 
     if (file)
-      responce =  GoogleCloudVision::Classifier.new('AIzaSyAnieMl-N_Ma3JCPu6w697lCYE4lmVWlHw',
+      responce =  GoogleCloudVision::Classifier.new('YOUR_API_KEY',
                                              [
                                                  # { image: './text.png', detection: 'TEXT_DETECTION', max_results: 10 },
                                                  { image: file_name, detection: 'LABEL_DETECTION', max_results: 10 }
